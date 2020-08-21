@@ -1,0 +1,149 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+  info [
+    "Unviversal Robot UR3e, UR5e and UR10e grasping cans using Robotiq 3F grippers."
+  ]
+  title "Universal Robot"
+  basicTimeStep 16
+  physicsDisableAngularThreshold 0.1
+  contactProperties [
+    ContactProperties {
+      bounce 0.1
+    }
+    ContactProperties {
+      material1 "slope"
+      coulombFriction [
+        0.5
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.0792079408630694 0.9818320085506448 0.17242972217584543 3.837551130524683
+  position -1.4145044904519157 0.9647404732987632 -1.4209657543305432
+  exposure 1.7
+}
+IprHd6ms180 {
+  hidden translation_1 0 0.2265 0
+  hidden rotation_1 0 1 0 5.0446762068198225
+  hidden translation_2 0 0 0
+  hidden rotation_2 0 0 -1 1.3946737440784547
+  hidden translation_3 0 0.19 0
+  hidden rotation_3 0 0 1 0.6936453835633526
+  hidden translation_4 0 0.139 0
+  hidden rotation_4 0 0 1 2.033310858731146
+  hidden translation_5 0 0.1185 0
+  hidden rotation_5 0 1 0 2.993189271902051
+  hidden translation_6 0 0.0983 0
+  hidden rotation_6 -1 0 0 1.4292691717483762e-07
+  hidden translation_14 0 0.0983 0
+  hidden rotation_14 1 0 0 9.424321830774485e-08
+  translation 0 0 0
+  controller "my_controller"
+}
+TexturedBackground {
+  texture "factory"
+}
+Floor {
+  size 17 5
+  appearance ThreadMetalPlate {
+  }
+}
+Wall {
+  translation -2.835 0 -2.58
+  size 9 2.4 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Wall {
+  translation 4.375 0 -2.58
+  name "wall(2)"
+  size 5 2.4 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Wall {
+  translation 1.77 1.2 -2.58
+  name "wall(3)"
+  size 0.21 1.2 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 0.1 0.7
+    }
+  }
+}
+Wall {
+  translation 0 0 2.42
+  name "wall(1)"
+  size 15 2.4 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Transform {
+  translation 1.77 1.05 -2.68
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.23 0.3 0.01
+      }
+    }
+  ]
+}
+Solid {
+  translation -0.08 0.19 -0.34
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+      }
+      geometry Sphere {
+        radius 0.0325
+        subdivision 4
+      }
+    }
+  ]
+}
+Solid {
+  translation -0.08 0.38 0.27
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+      }
+      geometry Sphere {
+        radius 0.0325
+        subdivision 4
+      }
+    }
+  ]
+  name "solid(2)"
+}
+Solid {
+  translation 0.3 0.36 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.0980392 1
+      }
+      geometry Sphere {
+        radius 0.0325
+        subdivision 4
+      }
+    }
+  ]
+  name "solid(1)"
+}
